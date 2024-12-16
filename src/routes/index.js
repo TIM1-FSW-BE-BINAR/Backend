@@ -3,6 +3,7 @@ import authRoute from './auth.js';
 import seatRoute from './seat.js';
 import flightRoute from './flight.js';
 import airportRoute from './airport.js';
+import discountRoute from './discount.js';
 import * as swaggerUI from 'swagger-ui-express';
 import { readFileSync } from 'fs';
 import { bookingRoute } from './booking.js';
@@ -35,5 +36,6 @@ router.use('/api/v1/seats', seatRoute);
 router.use('/api/v1/flights', flightRoute);
 router.use('/api/v1/airports', airportRoute);
 router.use('/api/v1/booking', bookingRoute);
+router.use('/api/v1/discount', discountRoute);
 
 export default router;

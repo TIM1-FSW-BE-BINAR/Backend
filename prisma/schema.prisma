@@ -232,3 +232,18 @@ enum PassengerType {
   CHILD
   ADULT
 }
+
+model Discount {
+  id          BigInt   @id @default(autoincrement())
+  name        String
+  type        String    // 'percentage' or 'fixed'
+  value       Float
+  startDate   DateTime
+  endDate     DateTime
+  minPurchase Float?
+  isActive    Boolean
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  code        String?  
+  description String? 
+}
